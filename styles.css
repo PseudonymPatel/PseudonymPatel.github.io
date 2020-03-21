@@ -1,0 +1,15 @@
+﻿body {
+    background-color: #0c0c0c;
+}
+
+#header {
+    color: forestgreen;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 500;
+}
+
+.output {
+    color: darkgreen;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+}
