@@ -8,8 +8,20 @@
     font-weight: 500;
 }
 
-.output {
+body {
     color: darkgreen;
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
+    font-size: 1em;
+}
+
+#input input {
+    margin: -5px;
+    background-color: transparent;
+    border: 0px;
+    padding-left: 0px;
+    color: ghostwhite;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 1em;
 }

@@ -30,3 +30,8 @@ function output(text, parent) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+function runFunc() {
+    var command = document.getElementById("mainInput").innerText
+    output(command)
+}
