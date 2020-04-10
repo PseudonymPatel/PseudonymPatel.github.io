@@ -28,3 +28,10 @@ input {
     font-weight: 300;
     font-size: 1em;
 }
+
+.terminal {
+    --background: transparent;
+    --color: green;
+    font-family: "Roboto Mono", monospace;
+    --size: 1.75;
+}
