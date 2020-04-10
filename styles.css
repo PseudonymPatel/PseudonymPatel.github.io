@@ -9,14 +9,17 @@
 }
 
 body {
-    color: darkgreen;
+    color: green;
     font-family: "Roboto Mono", monospace;
     font-weight: 300;
     font-size: 1em;
 }
 
-#input input {
-    margin: -5px;
+#prompt {
+    display: inline;
+}
+
+input {
     background-color: transparent;
     border: 0px;
     padding-left: 0px;

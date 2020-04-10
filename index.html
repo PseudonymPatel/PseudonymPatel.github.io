@@ -3,6 +3,9 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8" />
@@ -10,11 +13,9 @@
 </head>
 <body>
     <h1 id="header"></h1>
-    <div id="body-content"></div>
-    <form id="input" action="#">
-        <label style="color:forestgreen" for="mainInput">user@local#</label>
-        <input type="text" id="mainInput" name="mainInput" onsubmit="runFunc()"/>
-    </form>
+    <div id="body-content"></div> <!-- Do a quick git diff to figure out the input prompt i kinda liked it. -->
+    <p id="prompt">user@local#</p><input type="text" id="mainInput" onkeydown="logKeyCommand(event)" />
 </body>
 </html>
+<script type="text/javascript" src="commands.js"></script>
 <script type="text/javascript" src="main.js"></script>

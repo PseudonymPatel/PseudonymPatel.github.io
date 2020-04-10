@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terminal", "Terminal", "{DCDBF8D0-F910-46CF-8D82-B2EC43D61CC2}"
 	ProjectSection(SolutionItems) = preProject
+		commands.js = commands.js
 		index.html = index.html
 		main.js = main.js
 		styles.css = styles.css

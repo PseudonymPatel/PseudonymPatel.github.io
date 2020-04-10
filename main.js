@@ -1,6 +1,8 @@
 var outputArea = document.getElementById("body-content")
 var header = document.getElementById("header")
 
+var currentCommandString = "" 
+
 main()
 async function main() {
     header.innerHTML = `<pre>
@@ -21,6 +23,7 @@ async function prettyDisplay(textToDisplay, placeToDisplay) {
 }
 
 function output(text, parent) {
+    parent = parent || outputArea
     var textElement = document.createElement('p')
     textElement.className = "output"
     textElement.innerHTML = text
@@ -31,7 +34,42 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function runFunc() {
-    var command = document.getElementById("mainInput").innerText
-    output(command)
+function logKeyCommand(event) {
+    var keyCode = event.keyCode
+    var key = event.key
+    if (keyCode == 13) {
+        //because it is enter, call the right function...
+        doCommand(currentCommandString)
+        currentCommandString = ""
+        document.getElementById("mainInput").text = ""
+    } else if (/[a-zA-Z0-9-_ ?!]/gmi.test(String.fromCharCode(keyCode))) {
+        currentCommandString += key
+        console.log(currentCommandString)
+    } else {
+        //reject and remove from input.
+    }
+}
+
+function doCommand(command) {
+    console.log("Doing command")
+    //create the array of parts of command where first index is command
+    var commandArray = command.split(" ")
+    var i = 0;
+    while (i < commandArray.length) {
+        if (commandArray[i] == "") {
+            var d = commandArray.splice(i, 1)
+            continue //this is not going to do the same index
+        }
+        i++
+    }
+
+    //put the command prompt at the top
+    output("user@local#" + command)
+    console.log(commandArray)
+    //do a switch based on commands and args
+    switch (commandArray[0]) {
+        case "HELP":
+            output(doHelpCommand())
+            break;
+    }
 }
