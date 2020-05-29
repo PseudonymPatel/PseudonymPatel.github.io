@@ -1,6 +1,5 @@
-var outputArea = document.getElementById("body-content")
-var header = document.getElementById("header")
-
+//var outputArea = document.getElementById("body-content")
+//var header = document.getElementById("header")
 
 $(function () {
     $('#terminal').terminal(doCommand, {
@@ -8,18 +7,9 @@ $(function () {
     });
 });
 
-
-
-
-
-
-
-
-
-
 function doCommand(command) {
 
-    this.echo($.terminal.parse_options(["-x", "foo", "-aby", "bar"], { boolean: ['y'] }));
+    //this.echo($.terminal.parse_options(["-x", "foo", "-aby", "bar"], { boolean: ['y'] }));
 
     console.log("Doing command")
     //create the array of parts of command where first index is command
@@ -28,7 +18,7 @@ function doCommand(command) {
     while (i < commandArray.length) {
         if (commandArray[i] == "") {
             var d = commandArray.splice(i, 1)
-            continue //this is not going to do the same index
+            continue //this is not going to do the same index <- this should be fixed, Imma leave it here just in case because I haven't touched this in months and have not written any notes about it lol. I'm turning into a valve programmer oh god.
         }
         i++
     }
