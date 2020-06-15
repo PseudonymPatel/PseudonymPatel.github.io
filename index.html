@@ -4,8 +4,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css" />
+    <script src="./lib/jquery-term.min.js"></script>
+    <link rel="stylesheet" href="./lib/jquery-term.css" />
     <script type="text/javascript" src="commands.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -14,16 +14,24 @@
     <title>Sheen Patel</title>
 </head>
 <body>
-    <h1 id="header"><pre>
+    <div id="topflex">
+        <img id="mainImage" src="https://via.placeholder.com/200" />
+        <div id="topRightflex">
+            <h1 id="header">
+                <pre>
   ______ _                          ______                   _
  / _____) |                        (_____ \        _        | |
 ( (____ | |__  _____ _____ ____     _____) )____ _| |_ _____| |
  \____ \|  _ \| ___ | ___ |  _ \   |  ____(____ (_   _) ___ | |
  _____) ) | | | ____| ____| | | |  | |    / ___ | | |_| ____| |
-(______/|_| |_|_____)_____)_| |_|  |_|    \_____|  \__)_____)\_)</pre></h1>
+(______/|_| |_|_____)_____)_| |_|  |_|    \_____|  \__)_____)\_)</pre>
+            </h1>
+            <p> -- I build things. -- This is filler text about me!</p>
+        </div>
+    </div>
     <h2>I like to make things. I'll take on anything, and learning is my passion.</h2>
     <p>[Message introducing the terminal interactions]</p>
-    <a href="/plainPortfolio.html" id="sorry">Don't like using the terminal? Is it not showing up? Want to see a "normal" portfolio? :(</a>
+    <a href="./plainPortfolio.html" id="toStaticPortfolio">Don't like using the terminal? Is it not showing up? Want to see a "normal" portfolio? :(</a>
     <div id="terminal"></div>
 </body>
 </html>

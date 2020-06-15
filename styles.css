@@ -35,3 +35,21 @@ input {
     font-family: "Roboto Mono", monospace;
     --size: 1.75;
 }
+
+#topflex {
+    display: flex;
+    align-items: center;
+}
+
+#mainImage {
+    display: flex;
+    margin: 25px;
+    width: auto;
+    height: 100%;
+    border-radius: 40% 15% 40% 15%;
+    
+}
+
+#topRightflex {
+    align-self: stretch;
+}
