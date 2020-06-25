@@ -2,10 +2,37 @@
     background-color: #0c0c0c;
 }
 
-#header {
+#Asciiname {
     color: forestgreen;
     font-family: "Roboto Mono", monospace;
     font-weight: 500;
+}
+
+#header {
+    position: fixed;
+    right: 40px;
+    top: 60px;
+    background-color: forestgreen;
+    padding: 1em;
+    padding-bottom: 1.5em;
+    border-radius: 20px;
+    box-shadow: inset -2px 2px 20px #121212;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#header a {
+    font-family: "Roboto Mono", monospace;
+    color: #121212;
+    margin-bottom: .3em;
+    padding-right: 2em;
+}
+
+#header #name {
+    padding: 0em 1em 1em 1em;
+    font-size: 1.5em;
 }
 
 body {
@@ -52,4 +79,31 @@ input {
 
 #topRightflex {
     align-self: stretch;
+}
+
+#content {
+    margin: 0 auto;
+    margin-left: 50px;
+    max-width: 60rem;
+}
+
+.footer #top { /* Put the repeating the _ */
+    background-repeat: space;
+    background-image: url("images/underscore.png");
+}
+
+.footer {
+    background-color: forestgreen;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0;
+    width: 100%;
+}
+
+.footer p {
+    color: #121212;
+    font-size: .7em;
+    margin: 2rem;
 }
