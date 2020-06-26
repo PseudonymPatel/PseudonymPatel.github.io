@@ -1,39 +1,17 @@
-//var outputArea = document.getElementById("body-content")
-//var header = document.getElementById("header")
+﻿/*
+ * main.js -- controls the majority of things happening, using plain js.
+ * Author: Sheen (ofc)
+ * Feel free to copy anything!
+ */
 
-//Adds terminal object to class terminal.
-$(function () {
-    $('#terminal').terminal(doCommand, {
-        greetings: " * portfolio-nix v. 0.0.2\n * Enter `help` for help"
-    });
-});
 
-//Handles what happens when the user types in a command (raw string)
-function doCommand(command) {
-
-    //this.echo($.terminal.parse_options(["-x", "foo", "-aby", "bar"], { boolean: ['y'] }));
-
-    console.log("Doing command")
-    //create the array of parts of command where first index is command
-    var commandArray = command.split(" ")
-    var i = 0;
-    while (i < commandArray.length) {
-        if (commandArray[i] == "") {
-            var d = commandArray.splice(i, 1)
-            continue //this is not going to do the same index <- this should be fixed, Imma leave it here just in case because I haven't touched this in months and have not written any notes about it lol. I'm turning into a valve programmer oh god.
-        }
-        i++
-    }
-
-    console.log(commandArray)
-    //do a switch based on commands and args
-    switch (commandArray[0]) {
-        case "HELP":
-            this.echo(doHelpCommand())
-            break;
-    }
+//sleep function lmao I rely on this
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// ----------------------------- Fancy Text stuff -------------------------------
+// ----------------------------/==================\------------------------------
 
 /**
  * This function handles the Google-Docs like deletion and reprinting of text.
@@ -70,11 +48,56 @@ async function rotatingText(element, textToRotate, startIndex, endIndex = startI
         var string = textToRotate[index]
 
         //need to set each character individually
+        // UNDONE: THIS!
         for (i = 0; i < string.length; i++) {
             var sliced = string.slice(0, i+1)
             element.innerHTML = baseString + sliced + endString
             await sleep(100)
         }
+    }
+}
+
+
+// can use U+258F &#x258F; (▏) or U+2588 &#x2588; (█) as a cursor
+
+/**
+ * Does the "Hi. I'm Sheen." intro sequence
+ * Function will not be generalized as it is too specific for this usage.
+ */
+async function doIntroSequence() {
+    var inputarea = document.getElementById("sequence")
+    const cursorChar = "&#x2588;"
+    const speed = 200
+
+    //output the Hi
+    const string = "Hi!"
+    for (i = 0; i < string.length; i++) {
+        inputarea.innerHTML = string.slice(0, i) + cursorChar
+        await sleep(speed)
+    }
+
+    //now do a cursor blink after a line break
+    inputarea.innerHTML = string + "<br />" + cursorChar
+    await sleep(450) //cursor blink speed
+    inputarea.innerHTML = string + "<br />"
+    await sleep(450) //cursor blink speed
+    inputarea.innerHTML = string + "<br />" + cursorChar
+
+    //now add "I'm Sheen"
+    const string2 = "I'm Sheen"
+    for (i = 0; i <= string2.length; i++) {
+        inputarea.innerHTML = string + "<br />" + string2.slice(0, i) + cursorChar
+        await sleep(speed)
+    }
+
+    //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
+    const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it! 
+    while (true) {
+        inputarea.innerHTML = wholeThing
+        await sleep(450) //cursor blink time
+        inputarea.innerHTML = wholeThing + "<br />" + cursorChar
+        await sleep(450)
+
     }
 }
 
@@ -93,10 +116,6 @@ function output(text, parent) {
     textElement.className = "output"
     textElement.innerHTML = text
     parent.appendChild(textElement)
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function logKeyCommand(event) {
