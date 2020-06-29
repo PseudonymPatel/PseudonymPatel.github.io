@@ -66,8 +66,13 @@ async function rotatingText(element, textToRotate, startIndex, endIndex = startI
  */
 async function doIntroSequence() {
     var inputarea = document.getElementById("sequence")
+    var tagline = document.getElementById("tagline")
     const cursorChar = "&#x2588;"
     const speed = 200
+
+    //clear the tagline and store the current value
+    const taglineText = tagline.innerHTML
+    tagline.innerHTML = ""
 
     //output the Hi
     const string = "Hi!"
@@ -89,16 +94,28 @@ async function doIntroSequence() {
         inputarea.innerHTML = string + "<br />" + string2.slice(0, i) + cursorChar
         await sleep(speed)
     }
+    inputarea.innerHTML = inputarea.innerHTML.slice(0, inputarea.innerHTML.length - 1) //remove cursor from the end
 
-    //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
-    const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it! 
-    while (true) {
-        inputarea.innerHTML = wholeThing
-        await sleep(450) //cursor blink time
-        inputarea.innerHTML = wholeThing + "<br />" + cursorChar
-        await sleep(450)
+    //Now do the tagline
+    for (i = 0; i < taglineText.length; i++) {
+        if (taglineText.charAt(i) == ",") {
+            await sleep(300) //pause at each comma, commas are the split between things I do.
+        }
 
+        tagline.innerHTML = taglineText.slice(0, i+1) + cursorChar
+        await sleep(40)
     }
+
+    await sleep(200) //pause before removing cursor
+    tagline.innerHTML = tagline.innerHTML.slice(0, tagline.innerHTML.length - 1) //remove cursor again
+    // //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
+    //const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it! 
+    //while (true) {
+    //    inputarea.innerHTML = wholeThing
+    //    await sleep(450) //cursor blink time
+    //    inputarea.innerHTML = wholeThing + "<br />" + cursorChar
+    //    await sleep(450)
+    //}
 }
 
 
