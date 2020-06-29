@@ -40,10 +40,10 @@ body {
     font-size: 1.5em;
 }
 
-footer #top { /* Put the repeating the _ */
-    background-repeat: space;
+/*footer #top {*/ /* Put the repeating the _ */
+    /*background-repeat: space;
     background-image: url("images/underscore.png");
-}
+}*/
 
 footer {
     background-color: forestgreen;
