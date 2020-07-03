@@ -67,12 +67,16 @@ async function rotatingText(element, textToRotate, startIndex, endIndex = startI
 async function doIntroSequence() {
     var inputarea = document.getElementById("sequence")
     var tagline = document.getElementById("tagline")
+    var button = document.getElementById("seqContinue")
     const cursorChar = "&#x2588;"
     const speed = 200
 
     //clear the tagline and store the current value
     const taglineText = tagline.innerHTML
     tagline.innerHTML = ""
+
+    //hide the button until needed
+    button.style.visibility = "hidden";
 
     //output the Hi
     const string = "Hi!"
@@ -94,7 +98,11 @@ async function doIntroSequence() {
         inputarea.innerHTML = string + "<br />" + string2.slice(0, i) + cursorChar
         await sleep(speed)
     }
+
+    //wait a little before tagline
+    await sleep(400)
     inputarea.innerHTML = inputarea.innerHTML.slice(0, inputarea.innerHTML.length - 1) //remove cursor from the end
+    await sleep(400)
 
     //Now do the tagline
     for (i = 0; i < taglineText.length; i++) {
@@ -116,6 +124,16 @@ async function doIntroSequence() {
     //    inputarea.innerHTML = wholeThing + "<br />" + cursorChar
     //    await sleep(450)
     //}
+
+    button.style.opacity = "0%";
+    button.style.visibility = "visible";
+
+    //bring in the button slowly
+    for (i = 1; i <= 100; i++) {
+        button.style.opacity = i + "%";
+        await sleep(5);
+    }
+
 }
 
 
