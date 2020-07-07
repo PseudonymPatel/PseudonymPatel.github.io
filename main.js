@@ -136,7 +136,14 @@ async function doIntroSequence() {
 
 }
 
-
+/**
+ * What happens when the learn more button is pressed during intro sequence
+ */
+function learnMore() {
+    document.getElementById("seqContinue").scrollIntoView({
+        behavior: "smooth"
+    })
+}
 /*
 async function prettyDisplay(textToDisplay, placeToDisplay) {
     for (i = 0; i < textToDisplay.length; i++) {
