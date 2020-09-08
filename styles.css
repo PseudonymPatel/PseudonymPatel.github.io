@@ -1,4 +1,4 @@
-﻿/*
+/*
     Hand coded by Sheen 2020
 
     Feel free to steal code!
@@ -27,7 +27,7 @@ body {
     padding-bottom: 1.5em;
     border-radius: 20px;
     box-shadow: inset -2px 2px 20px #121212;
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -105,7 +105,7 @@ input {
     width: auto;
     height: 100%;
     border-radius: 40% 15% 40% 15%;
-    
+
 }
 
 #topRightflex {
@@ -115,7 +115,7 @@ input {
 /* ----------- portfolio page -------------- */
 
 h3 {
-    font-size: 3em;
+    font-size: 2em;
     padding-left: 0;
     margin-bottom: 20px;
 }
@@ -125,10 +125,21 @@ hr {
     border-color: #454545;
 }
 
+#content {
+    margin-left: auto;
+	margin-right: auto;
+    max-width: 850px;
+    color: forestgreen;
+}
+
 .content {
-    margin: 0 auto;
-    margin-left: 70px;
-    max-width: 60rem;
+	margin-left: 3em;
+	color: whitesmoke;
+}
+
+.content a {
+    color: orange;
+    text-decoration: none;
 }
 
 #intro {
@@ -148,7 +159,18 @@ hr {
     font-family: "Montserrat", sans-serif;
     font-size: 3vmin;
     max-width: 60rem;
+    color: whitesmoke;
 }
+
+.downarrow {
+  border: solid forestgreen;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
 
 /* Keyframing for intro button */
 @keyframes buttonChange {
@@ -179,14 +201,15 @@ hr {
     background-color: #121212;
     border: 4px solid forestgreen;
     padding: 20px;
-    margin-top: 15vh;
     color: green;
     border-radius: 20px;
-    /*position: absolute;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    bottom: 30vmin;*/
-    margin-left: 25%;
+
+    position: absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    margin: 0 auto;
+
     animation: buttonChangeOut 0.5s;
 }
 
