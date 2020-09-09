@@ -19,32 +19,33 @@ body {
 }
 
 #header {
-    position: fixed;
-    right: 40px;
-    top: 60px;
-    background-color: forestgreen;
-    padding: 1em;
-    padding-bottom: 1.5em;
-    border-radius: 20px;
-    box-shadow: inset -2px 2px 20px #121212;
+    position: sticky;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    padding: 10px 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
+    background-color: #0c0c0c;
+    border-width: 1px;
+    border-style: none none solid none;
+    border-color: forestgreen;
+    
     z-index: 5;
 }
 
 #header a {
     font-family: "Roboto Mono", monospace;
-    color: #121212;
+    color: forestgreen;
     margin-bottom: .3em;
     padding-right: 2em;
+    text-decoration: none;
 }
 
 #header #name {
     padding: 0em 1em 1em 1em;
     font-size: 1.5em;
+    left: 0px;
+    font-weight: 600;
 }
 
 /*footer #top {*/  /* Put the repeating the _ */
@@ -207,7 +208,7 @@ hr {
     position: absolute;
     left:0;
     right:0;
-    bottom: 0;
+    bottom: 65px;
     margin: 0 auto;
 
     animation: buttonChangeOut 0.5s;
