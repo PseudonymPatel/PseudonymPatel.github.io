@@ -46,6 +46,9 @@
 
     display: flex;
     flex-direction: row;
+
+    animation: fadeInUp;
+    animation-duration: 1s;
 }
 
 .article img {
