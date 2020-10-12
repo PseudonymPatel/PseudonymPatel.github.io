@@ -12,6 +12,7 @@ h1 {
     left: 0;
     right: 0;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 #content img {
@@ -34,12 +35,39 @@ h1 {
 	margin-left: 0em;
 	color: whitesmoke;
 	font-family: "Montserrat", "Sans-serif";
-	font-weight: 400;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-indent: 0.5in;
 }
 
 .writing a {
     color: orange;
     text-decoration: none;
+}
+
+small {
+    color: wheat;
+}
+
+/* Following is to use dashes as list markers */
+.writing ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+}
+.writing ul li {
+    color: whitesmoke;
+}
+.writing ul li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+}
+
+#closingName {
+    color: whitesmoke;
+    font-style: italic;
+    margin-top: 50px;
 }
 
 /* Following for youtube videos to look nice */

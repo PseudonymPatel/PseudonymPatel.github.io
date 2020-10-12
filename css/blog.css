@@ -14,11 +14,20 @@
     position: relative;
     display: block;
     color: forestgreen;
+
+    transition: all .2s ease-in-out;
+}
+
+#main_article:hover {
+    transform: scale(1.1);
 }
 
 #main_article img {
     max-width: 100%;
     height: auto;
+
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
 }
 
 #main_article #inside {
@@ -26,6 +35,8 @@
     top: 50%;
     left: 50px;
     padding-right: 20%;
+
+    text-shadow: 0 1px 0 black;
 }
 
 #main_article #inside p {
@@ -49,6 +60,11 @@
 
     animation: fadeInUp;
     animation-duration: 1s;
+
+    transition: all .2s ease-in-out;
+}
+.article:hover {
+    transform: scale(1.1);
 }
 
 .article img {

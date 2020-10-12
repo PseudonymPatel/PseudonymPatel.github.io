@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173590248-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-173590248-1');
+    </script>
+
+	<title>80's assembly in 2020 - Part 1 - Sheen Patel</title>
+	<meta name="description" content="Part 1 of my journey learning assembly in 2020, but with a twist: No internet.">
+	<meta name="author" content="Sheen Patel">
+
+  	<link rel="stylesheet" href="../css/styles.css">
+  	<link rel="stylesheet" href="../css/blogPost.css">
+  	<!-- <link rel="stylesheet" href="../css/gistHighlighting.css"> https://lonekorean.github.io/gist-syntax-themes/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<header id="header">
+	    <a id="name" href="https://sheenpatel.com">Sheen Patel</a>
+        <a href="../index.html">Home</a>
+		<a href="../blog.html">Blog</a>
+    </header>
+
+    <h1>Learning Assembly in 2020 but it’s the 80s - Part 1</h1>
+	<div id="content">
+        <img id="main-img" src="../images/hexdump.png" />		
+
+        <div class="writing">
+            <p>Hi there! This is going to be a series of blog posts where you can follow my journey of learning assembly, but with a twist: I have to do it without the internet.
+            </p>
+           
+            <h2>Why Assembly?</h2>
+            <p>Before I get into the process, I want to address something first: Who learns assembly in 2020? It’s such a niche topic and few programmers ever even interact with it directly. Maybe some legacy programmers use it in a job; definitely the security analysts know it. But no “mainstream” programming job ever uses it. Maybe you might see it in the debugger as you debug the bug you’ve been working on for the last couple weeks. (Hint: take a break; it’ll come to you in a dream.) 
+            </p>
+            <p>
+            So that begs the question, why the hell do <em>I</em> want to learn <em>assembly</em>> of all languages? Well, it’s been on my mind for a while, especially as I’ve dabbled in some CTFs lately. I love learning the underlying stuff that makes things tick and the CPU fan go brrr. Assembly seemed like that perfect mix of something novel but still useful.                 
+            </p>
+            
+            <h2>With a twist</h2>
+            <p>Of course, nothing I do can ever be straightforward. That’s why I decided to give myself a bit of a challenge embarking on this one. I decided I would learn it like it’s the 80s. <em>No internet. No help. Just the processor manual.</em> Yes, that means <em>no StackOverflow.</em> Why, you may ask? I dunno. It seems like a good idea, and I’m taking my time anyways. It’s the year before college, and I thought that I should sneak in something new throughout the year (after college apps, of course). I’ve always moaned how programming has gotten so easy nowadays and people are learning to program inefficiently and bassackwards, so I thought I’d experience the old ways.
+            </p>
+
+            <h2>Planning it out</h2>
+            <p>	My computer runs a Ryzen 5 2600, so naturally I’d use AMD’s processor specification/manual thing. It doesn’t really matter where I learn assembly from, as standardization nowadays makes things essentially the same for my purposes. After 5 minutes of Googling, I found the “AMD64 Architecture Programmer’s Manual”. I just downloaded all 5 of them, they seem to build on one another.
+            </p>
+            <p><a href="https://developer.amd.com/resources/developer-guides-manuals/">https://developer.amd.com/resources/developer-guides-manuals/</a> All the AMD manuals and resources I will use can be found here.</p>
+            <p>Armed with the manual, I also had to figure out how to run the assembly code I would write. To make things easier, I would use neovim (basically vim for those unfamiliar) as an editor and Ubuntu as an operating system. As a compiler, I’d use one of those _ASM assemblers. NASM and FASM seemed like the two big ones people talked about, and I decided to go with FASM as the good folks on StackOverflow put in some good words about it and it seems like it’s able to compile for a wide range of operating systems (not that it matters, from my understanding the instruction sets are essentially the same, and I won’t be using any extensions or virtualization stuff).
+            </p>
+            <p>After an hour or two of research into assembly and machine code, I will probably use the internet for learning how to use FASM to compile programs. Before you shout SCAM! SCAM!, I will still learn the actual assembly part using solely the architecture manuals. Also, from my understanding before embarking on this, the manual seems to be talking about the machine code part of it, but they also give mnemonics (the human-readable names for instructions). I am assuming that FASM uses the same mnemonics. If they don’t, anyone reading this will be cringing in their seat! (It will also be discussed in depth in the next part.)
+            </p>
+            <p>As I’m doing research, I’m also finding things like syscall, which seem to be calling the system operating system and does things like output and exiting. For these things, I don’t know if they are part of the AMD manual or the operating system. If it is based on the operating system, I will try to stay true to the idea of this challenge and only use the manual and not forums or StackOverflow.
+            </p>
+
+            <h2>A revised plan</h2>
+            <p style="text-indent: 0px;">With the above considerations in mind, here is a summary of the challenge:</p>
+            <ul>
+                <li>I will be using the <strong>x86_64</strong> AMD Architecture with the Ubuntu operating system.</li>
+                <li>I will use <strong>FASM</strong> as an assembler and <strong>neovim</strong> as a text editor.</li>
+                <li>No internet will be allowed*, except to get the necessary manuals.</li>
+                    <ul><li>*I may have to use the FASM website to learn how to use FASM, but that is all.</li></ul>
+                <li>The overarching idea is to stay true to old-fashioned 80s programming on modern hardware, and if there is any conflicts in the rules I set up for myself, the more “authentic” choice will be taken.</li>
+            </ul> 
+
+            <h2>Closing remarks</h2>
+            <p>Let’s see how long I last :). I’ll try to post updates and my progress as I go along. If you want to talk to me, please feel free to contact me on Discord at ComputerButter#8790. Friend me if you can’t message me straightaway.</p>
+
+            <small>PS, one final thing: If you have any ideas for improving my blog, whether it be writing or the blog itself, always reach out, I won’t bite.</small>
+
+            <h2 id="closingName"> // Sheen Patel</h2>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Sheen Patel 2020&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;<a href="../blog.html">Blog</a>&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;<a href="../index.html">Portfolio</a>&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;<a href="https://github.com/PseudonymPatel">GitHub</a>&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;Thanks for stopping by!</p>
+    </div>
+</body>
+</html>
