@@ -78,4 +78,6 @@
 
 .article #inside p {
     font-family: "Montserrat", Sans-serif;
+    position: absolute;
+    bottom: 0;
 }
