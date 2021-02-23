@@ -5,11 +5,14 @@
 <head>
     <!-- Goog analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-173590248-1');
+    if (document.location.hostname == "sheenpatel.com") { 
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173590248-1');
+    } else { 
+        _gaq = {push: function(arg) {console.log("ga:", arg)}}
+    }
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

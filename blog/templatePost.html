@@ -5,11 +5,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173590248-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-173590248-1');
+    if (document.location.hostname == "sheenpatel.com") { 
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173590248-1');
+    } else { 
+        _gaq = {push: function(arg) {console.log("ga:", arg)}}
+    }
     </script>
 
 	<title>Template Blog Post</title>
