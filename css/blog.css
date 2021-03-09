@@ -25,9 +25,11 @@
 #main_article img {
     max-width: 100%;
     height: auto;
+}
 
-    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
-    filter: blur(2px);
+.blur {
+    -webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
+    filter: blur(1px);
 }
 
 #main_article #inside {
@@ -68,7 +70,8 @@
 }
 
 .article img {
-    width: 20%;
+    object-fit: cover;
+    max-width: 20%;
     height: auto;
 }
 
