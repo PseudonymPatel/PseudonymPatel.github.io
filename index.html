@@ -1,109 +1,70 @@
-<!DOCTYPE html>
+---
+layout: default
+title: sheenpatel.com
+---
+<div id="intro">
+    <h1 id="sequence">Hi.<br />I'm Sheen</h1>
+    <h2 id="tagline">I'm a civil engineering student, self-taught programmer, teacher, and hacker making
+	a difference in people's lives and in the world</h2>
+    <button id="seqContinue" onclick="learnMore()"><i class="downarrow"></i></button>
+    <script>doIntroSequence()</script>
+</div>
+<hr />
+<hr />
 
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173590248-1"></script>
-    <script>
-	if (document.location.hostname == "sheenpatel.com") {
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-173590248-1');
-	} else {
-		_gaq = {push: function(arg) {console.log("ga:", arg)}}
-	}
-    </script>
-
-    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./lib/jquery-term.min.js"></script>
-    <link rel="stylesheet" href="./lib/jquery-term.css" />
-    <script type="text/javascript" src="commands.js"></script>-->
-    <script type="text/javascript" src="js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="css/styles.css">
-    <meta charset="utf-8" />
-    <title>Sheen Patel</title>
-</head>
-<body>
-     <header id="header">
-        <a id="name" href="https://sheenpatel.com">Sheen Patel</a>
-        <a href="#me">About Me</a>
-        <a href="blog">Blog</a>
-    </header>
-
-    <div id="intro">
-        <h1 id="sequence">Hi.<br />I'm Sheen</h1>
-        <h2 id="tagline">I'm a civil engineering student, self-taught programmer, teacher, and hacker making
-		a difference in people's lives and in the world</h2>
-        <button id="seqContinue" onclick="learnMore()"><i class="downarrow"></i></button>
-        <script>doIntroSequence()</script>
-    </div>
-    <hr />
-    <hr />
-
-	<div id="content">
-		<div class="section" id="me">
-	        <h3>About Me</h3>
-	        <div class="content"><p>
-				Please note: This website was originally built to show my computer science projects and has
-				little to do with my current engineering (student) career! I hope to start incorporating new things to
-				the site, but for now, this website is still going to be mainly computer-oriented.
-				<br /><br />
-				Making things is in my blood. I'm interested in trying new technologies and pushing old ones to
-				the breaking point. In my spare time, I've been developing and exploring flight simulators and
-				have recently built a throttle and joystick system for Microsoft Flight Simulator 2020 (check out the <a href="blog/nxtthrottle.html">blog post here</a>).
-				I've done the same with a Wii remote, and it's surprisingly fun!
-				<br /></br />
-				A couple (many) months ago I experimented with
-				<a href="https://medium.com/@icyphox/what-are-ctfs-and-why-you-should-care-652f44b18221">CTFs</a>
-				and expanded my low level computing knowledge. I've started on my own operating system,
-				which I have no time to actually work on!
-				<br /><br />
-				At this point, I'm now in university! I haven't really touched this site in a couple months,
-				mostly due to university, but I hope to change that. I've started on a lot of big projects and
-				it's honestly fine if you don't even know about them because it's not like you care. Honestly,
-				who even is looking at this site, probably a friend who Googled my name and this is the first
-				result so <i>I guess</i> you want to see what I'm doing so here you go this is the site I made
-				in high school so I could be in the first page of Google and also have a blog where I can ramble
-				about various topics.
-				<br /><br />
-				If you want to see some of my stuff, why don't you check out my <a href="https:github.com/PseudonymPatel">GitHub</a> or my <a href="blog">blog</a>!
-	        </p></div>
-	    </div>
-	    <div class="section" id="skills">
-	        <h3>What I Do (or used to do, in high school, haven't updated this yet)</h3>
-	        <div class="content">
-	            <h4>I've dabbled in a bit of everything, and I'm still exploring! (Yea, mostly concrete now)</h4>
-	            <h5>You'll find me frequenting</h5>
-	            <ul>
-	                <li>Swift (now experimenting with windows libraries!)</li>
-	                <li>The unix command line (zsh ftw)</li>
-	                <li>Python (aka runnable pseudocode)</li>
-	                <li>Machine Learning (haha math go minima)</li>
-	                <li>neovim (vimrc on <a href="https://github.com/PseudonymPatel/neovimSetup">github</a>!)</li>
-	            </ul>
-				<h4>I also love to teach!</h4>
-				<p>
-					I have learned almost all of my programming and computer science knowledge from teaching myself,
-					and I want to pay back my knowledge and lead kids to find their STEM passions!
-				</p>
-	        </div>
-	    </div>
-	    <div class="section" id="timeline">
-	        <h3>My Story</h3>
-	        <!-- Timeline of different actions/learning things, etc that led me to where I am. Vertical timeline, put it in the center and have quips alternate sides with images.-->
-	        <div class="content"><p>
-                This section is not complete yet, sorry! Please check back later... <section style="font-size:0.7em;">but I will probably never make it...</section>
-	        <p></div>
+<div id="content">
+	<div class="section" id="me">
+	    <h3>About Me</h3>
+	    <div class="content"><p>
+			Please note: This website was originally built to show my computer science projects and has
+			little to do with my current engineering (student) career! I hope to start incorporating new things to
+			the site, but for now, this website is still going to be mainly computer-oriented.
+			<br /><br />
+			Making things is in my blood. I'm interested in trying new technologies and pushing old ones to
+			the breaking point. In my spare time, I've been developing and exploring flight simulators and
+			have recently built a throttle and joystick system for Microsoft Flight Simulator 2020 (check out the <a href="blog/nxtthrottle.html">blog post here</a>).
+			I've done the same with a Wii remote, and it's surprisingly fun!
+			<br /></br />
+			A couple (many) months ago I experimented with
+			<a href="https://medium.com/@icyphox/what-are-ctfs-and-why-you-should-care-652f44b18221">CTFs</a>
+			and expanded my low level computing knowledge. I've started on my own operating system,
+			which I have no time to actually work on!
+			<br /><br />
+			At this point, I'm now in university! I haven't really touched this site in a couple months,
+			mostly due to university, but I hope to change that. I've started on a lot of big projects and
+			it's honestly fine if you don't even know about them because it's not like you care. Honestly,
+			who even is looking at this site, probably a friend who Googled my name and this is the first
+			result so <i>I guess</i> you want to see what I'm doing so here you go this is the site I made
+			in high school so I could be in the first page of Google and also have a blog where I can ramble
+			about various topics.
+			<br /><br />
+			If you want to see some of my stuff, why don't you check out my <a href="https:github.com/PseudonymPatel">GitHub</a> or my <a href="blog">blog</a>!
+	    </p></div>
+	</div>
+	<div class="section" id="skills">
+	    <h3>What I Do (or used to do, in high school, haven't updated this yet)</h3>
+	    <div class="content">
+	        <h4>I've dabbled in a bit of everything, and I'm still exploring! (Yea, mostly concrete now)</h4>
+	        <h5>You'll find me frequenting</h5>
+	        <ul>
+	            <li>Swift (now experimenting with windows libraries!)</li>
+	            <li>The unix command line (zsh ftw)</li>
+	            <li>Python (aka runnable pseudocode)</li>
+	            <li>Machine Learning (haha math go minima)</li>
+	            <li>neovim (vimrc on <a href="https://github.com/PseudonymPatel/neovimSetup">github</a>!)</li>
+	        </ul>
+			<h4>I also love to teach!</h4>
+			<p>
+				I have learned almost all of my programming and computer science knowledge from teaching myself,
+				and I want to pay back my knowledge and lead kids to find their STEM passions!
+			</p>
 	    </div>
 	</div>
-
-    <div id="footer">
-        <p>Sheen Patel 2022&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;<a href="index.html">Portfolio</a>&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;<a href="https://github.com/PseudonymPatel">GitHub</a>&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;programmingpatel@gmail.com&nbsp;&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;Thanks for stopping by!</p>
-    </div>
-</body>
-</html>
+	<div class="section" id="timeline">
+	    <h3>My Story</h3>
+	    <!-- Timeline of different actions/learning things, etc that led me to where I am. Vertical timeline, put it in the center and have quips alternate sides with images.-->
+	    <div class="content"><p>
+            This section is not complete yet, sorry! Please check back later... <section style="font-size:0.7em;">but I will probably never make it...</section>
+	    <p></div>
+	</div>
+</div>
