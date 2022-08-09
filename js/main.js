@@ -16,13 +16,13 @@ function sleep(ms) {
 /**
  * This function handles the Google-Docs like deletion and reprinting of text.
  * It will rotate the text between startIndex and endIndex with an array of strings.
- * 
+ *
  * @param {HTMLElement} element The element that will be continuously modified by the function.
  * @param {[String]} textToRotate A array of strings to cycle through
  * @param {Number} startIndex The index of the innerHTML in element where the text rotation replacement should start.
  * @param {Number} endIndex The index of the inerHTML in element where the text replacement should end.
  * @param {Boolean} forever Whether or not to repeat replacement forever, default = true
- * 
+ *
 */
 async function rotatingText(element, textToRotate, startIndex, endIndex = startIndex, forever = true) {
     var index = 0
@@ -67,7 +67,8 @@ async function rotatingText(element, textToRotate, startIndex, endIndex = startI
 async function doIntroSequence() {
     var inputarea = document.getElementById("sequence")
     var tagline = document.getElementById("tagline")
-    var button = document.getElementById("seqContinue")
+    var headerline = document.getElementById("header")
+//    var button = document.getElementById("seqContinue")
     const cursorChar = "&#x2588;"
     const speed = 200
 
@@ -76,7 +77,8 @@ async function doIntroSequence() {
     tagline.innerHTML = ""
 
     //hide the button until needed
-    button.style.visibility = "hidden";
+//    button.style.visibility = "hidden";
+    headerline.style.visibility = "hidden";
 
     //output the Hi
     const string = "Hi!"
@@ -104,6 +106,9 @@ async function doIntroSequence() {
     inputarea.innerHTML = inputarea.innerHTML.slice(0, inputarea.innerHTML.length - 1) //remove cursor from the end
     await sleep(400)
 
+	//fade in link stuff at same time
+	fadeInStuff()
+
     //Now do the tagline
     for (i = 0; i < taglineText.length; i++) {
         if (taglineText.charAt(i) == ",") {
@@ -117,7 +122,7 @@ async function doIntroSequence() {
     await sleep(200) //pause before removing cursor
     tagline.innerHTML = tagline.innerHTML.slice(0, tagline.innerHTML.length - 1) //remove cursor again
     // //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
-    //const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it! 
+    //const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it!
     //while (true) {
     //    inputarea.innerHTML = wholeThing
     //    await sleep(450) //cursor blink time
@@ -125,17 +130,30 @@ async function doIntroSequence() {
     //    await sleep(450)
     //}
 
-    button.style.opacity = "0%";
-    button.style.visibility = "visible";
 
-    //bring in the button slowly
-    for (i = 1; i <= 100; i++) {
-        button.style.opacity = i + "%";
-        await sleep(5);
-    }
+//    button.style.opacity = "0%";
+//    button.style.visibility = "visible";
+//
+//    //bring in the button slowly
+//    for (i = 1; i <= 100; i++) {
+//        button.style.opacity = i + "%";
+//        await sleep(5);
+//    }
 
 }
 
+async function fadeInStuff() {
+	var headerline = document.getElementById("header")
+
+    headerline.style.opacity = "0%";
+    headerline.style.visibility = "visible";
+
+    //bring in the button slowly
+    for (i = 1; i <= 100; i++) {
+        headerline.style.opacity = i + "%";
+        await sleep(5);
+    }
+}
 /**
  * What happens when the learn more button is pressed during intro sequence
  */

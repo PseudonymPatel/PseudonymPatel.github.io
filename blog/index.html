@@ -4,11 +4,15 @@ title: Sheen Patel's Blog
 ---
 <link rel="stylesheet" href="/css/blog.css">
 <div id="content">
-	<a href="nxtthrottle.html" id="main_article">
-		<img src="../images/nxtThrottleThumbnail.png" />
+	<a href="{{ site.posts[0].url }}" id="main_article">
+		<img src="{{ site.posts[0].imageSrc }}" />
 		<div id="inside">
-			<h1>I Turned My Decade Old Robotics Kit Into Controls for Microsoft Flight Simulator 2020</h1>
-			<p>Sheen Patel | March 9, 2021 | Flight Simulators, Programming</p>
+			<h1>{{ site.posts[0].title }}</h1>
+			<p>{{ site.posts[0].author }} |
+      {{ site.posts[0].date | date: "%B" }}
+      {{ site.posts[0].date | date: "%d" | plus:'0' }},
+      {{ site.posts[0].date | date: "%Y" }} |
+	  {{ site.posts[0].tags | join: ', ' }}</p>
 		</div>
 	</a>
 
@@ -18,22 +22,18 @@ title: Sheen Patel's Blog
 
     <!-- <h2>Also check out my other articles:</h2> -->
 
-
-    <a href="exploitativeEntertainment.html" class="article">
-        <img src="../images/kidWatchingYoutube.jpg" />
+	{% for post in site.posts offset: 1 %}
+	<a href="{{ post.url }}" class="article">
+		<img src="{{ post.imageSrc }}" />
 		<div id="inside">
-			<h1>YouTube and the Growing Problem of Exploitative Entertainment</h1>
-			<p>Sheen Patel | October 25, 2020 | Technology, Entertainment</p>
+			<h1>{{ post.title }}</h1>
+			<p>{{ post.author }} |
+      {{ post.date | date: "%B" }}
+      {{ post.date | date: "%d" | plus:'0' }},
+      {{ post.date | date: "%Y" }} | {{ post.tags | join: ', '}}</p>
 		</div>
     </a>
-
-	<a href="assemblyPart1.html" class="article">
-        <img src="../images/hexdump.png" />
-		<div id="inside">
-			<h1>Learning Assembly in 2020 but it's the 80s - Part 1</h1>
-			<p>Sheen Patel | October 10, 2020 | Assembly, Programming</p>
-		</div>
-    </a>
+	{% endfor %}
 
 	<h3>All posts:</h3>
 	<ul>

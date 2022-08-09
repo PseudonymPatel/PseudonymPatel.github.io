@@ -29,7 +29,7 @@ body {
     border-width: 1px;
     border-style: none none solid none;
     border-color: forestgreen;
-    
+
     z-index: 5;
 }
 
@@ -113,7 +113,7 @@ input {
     align-self: stretch;
 }
 
-/* ----------- portfolio page -------------- */
+/* ----------- index page -------------- */
 
 h3 {
     font-size: 2em;
@@ -145,9 +145,9 @@ hr {
 
 #intro {
     position: relative;
-    height: 100vh;
+    /*height: 100vh;*/
     box-sizing: border-box;
-    padding-top: 7%;
+    padding-top: 3%; /*previously 7% */
 }
 
 #intro #sequence {
@@ -156,8 +156,8 @@ hr {
 }
 
 #intro #tagline {
-    margin-left: 11%;
-    font-family: "Montserrat", sans-serif;
+    margin-left: 10%;
+    /*font-family: "Montserrat", sans-serif;*/
     font-size: 3vmin;
     max-width: 60rem;
     color: whitesmoke;
