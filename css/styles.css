@@ -163,6 +163,27 @@ hr {
     color: whitesmoke;
 }
 
+#index-links {
+	font-size: 3vmin;
+	max-width: 60rem;
+	color: whitesmoke;
+	display: inline;
+	margin-left: 10%;
+	margin-top: 1%;
+	position: absolute;
+}
+
+#index-links a, #index-links a:visited {
+	text-decoration: none;
+	color: whitesmoke;
+	transition: color 0.5s;
+}
+
+#index-links a:hover {
+	color: forestgreen;
+	transition: color 0.5s;
+}
+
 .downarrow {
   border: solid forestgreen;
   border-width: 0 6px 6px 0;

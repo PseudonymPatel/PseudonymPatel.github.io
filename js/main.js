@@ -67,7 +67,7 @@ async function rotatingText(element, textToRotate, startIndex, endIndex = startI
 async function doIntroSequence() {
     var inputarea = document.getElementById("sequence")
     var tagline = document.getElementById("tagline")
-    var headerline = document.getElementById("header")
+    var links = document.getElementById("index-links")
 //    var button = document.getElementById("seqContinue")
     const cursorChar = "&#x2588;"
     const speed = 200
@@ -78,7 +78,7 @@ async function doIntroSequence() {
 
     //hide the button until needed
 //    button.style.visibility = "hidden";
-    headerline.style.visibility = "hidden";
+    links.style.visibility = "hidden";
 
     //output the Hi
     const string = "Hi!"
@@ -121,6 +121,8 @@ async function doIntroSequence() {
 
     await sleep(200) //pause before removing cursor
     tagline.innerHTML = tagline.innerHTML.slice(0, tagline.innerHTML.length - 1) //remove cursor again
+
+	blink()
     // //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
     //const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it!
     //while (true) {
@@ -141,9 +143,21 @@ async function doIntroSequence() {
 //    }
 
 }
+async function blink() {
+    var inputarea = document.getElementById("tagline")
+    const cursorChar = "&#x2588;"
+
+    const wholeThing = inputarea.innerHTML.slice(0, inputarea.innerHTML.length-1) //don't want the cursor in it!
+    while (true) {
+        inputarea.innerHTML = wholeThing
+        await sleep(450) //cursor blink time
+        inputarea.innerHTML = wholeThing + cursorChar
+        await sleep(450)
+    }
+}
 
 async function fadeInStuff() {
-	var headerline = document.getElementById("header")
+	var headerline = document.getElementById("index-links")
 
     headerline.style.opacity = "0%";
     headerline.style.visibility = "visible";
