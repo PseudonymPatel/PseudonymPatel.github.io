@@ -79,6 +79,7 @@ async function doIntroSequence() {
     //hide the button until needed
 //    button.style.visibility = "hidden";
     links.style.visibility = "hidden";
+	links.style.opacity = 0;
 
     //output the Hi
     const string = "Hi!"
@@ -107,7 +108,9 @@ async function doIntroSequence() {
     await sleep(400)
 
 	//fade in link stuff at same time
-	fadeInStuff()
+	//fadeInStuff()
+	links.style.visibility = "visible"
+	links.style.opacity = 1
 
     //Now do the tagline
     for (i = 0; i < taglineText.length; i++) {
@@ -120,7 +123,7 @@ async function doIntroSequence() {
     }
 
     await sleep(200) //pause before removing cursor
-    tagline.innerHTML = tagline.innerHTML.slice(0, tagline.innerHTML.length - 1) //remove cursor again
+    //tagline.innerHTML = tagline.innerHTML.slice(0, tagline.innerHTML.length - 1) //remove cursor again
 
 	blink()
     // //infinitely blink because no more <blink> :( (honestly tho that was probably for the best)
@@ -175,6 +178,39 @@ function learnMore() {
     document.getElementById("seqContinue").scrollIntoView({
         behavior: "smooth"
     })
+}
+
+async function activateTerminal() {
+	if (!window.jQuery) {
+		return
+	}
+
+	var termDiv = document.getElementById("term")
+	termDiv.style.opacity = 0
+
+	var introElm = document.getElementById("intro")
+	introElm.animate({"opacity": "0"}, 1000)
+
+	await sleep(900)
+	introElm.remove()
+	await sleep(200)
+
+	termDiv.animate({"opacity": "1"}, 500)
+	await sleep(450)
+	termDiv.style.opacity = 1
+
+	$.getScript("/lib/jquery-term.min.js", function() {
+		$.getScript("/js/commands.js")
+			.fail(function(a, b, c) {
+				$("#term").text("Failed to load commands :(")
+				return
+			})
+	})
+		.fail(function(a, b, c) {
+			$("term").text("Failed to load terminal :(")
+			return
+		})
+
 }
 /*
 async function prettyDisplay(textToDisplay, placeToDisplay) {

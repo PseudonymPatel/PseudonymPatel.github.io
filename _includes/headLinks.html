@@ -20,4 +20,14 @@ if (document.location.hostname == "sheenpatel.com") {
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 <link rel="stylesheet" href="/css/styles.css">
+{% if page.custom_css %}
+    {% for css_file in page.custom_css %}
+	<link rel="stylesheet" href="{{ css_file }}">
+    {% endfor %}
+{% endif %}
+{% if page.custom_js %}
+	{% for js_file in page.custom_js %}
+	<script type="text/javascript" src="{{ js_file }}"></script>
+	{% endfor %}
+{% endif %}
 <meta charset="utf-8" />

@@ -17,8 +17,8 @@ var directoryStructure = {
 
 //Adds terminal object to class terminal.
 $(function () {
-    $('#terminal').terminal(doCommand, {
-        greetings: " * portfolio-nix v. 0.0.2\n * Enter `help` for help"
+    $('#term').terminal(doCommand, {
+        greetings: " * portfolio-nix v. 0.0.2\n * Enter `help` for help\n WARNING THIS WAS WRITTEN A VERY LONG TIME AGO!!"
     });
 });
 
