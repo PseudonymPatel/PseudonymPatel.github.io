@@ -1,0 +1,41 @@
+---
+layout: null
+title: Contact Me
+custom_css: /css/contact.css
+---
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/html">
+<head>
+	{% include headLinks.html %}
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="/lib/jquery-term.css" />
+
+	<title>{{ page.title }}</title>
+
+</head>
+<body>
+	<div id="me">
+		<h1>Contact Me</h1>
+
+		<div class="row">
+			<div class="item">
+				<a class="emailAddr" href="mailto:programmingpatel@gmail.com">programmingpatel@gmail.com</a>
+			</div>
+			<div class="item extras">
+				<a title="Fingerprint: B12D F147 190D B067 C168 8FFA FFE3 9595 17DB 2368" href="/resources/programmingpatel_public_pgp.asc" type="application/pgp-keys">PGP Key</a>
+				<!--
+				&middot;
+				<a title="View in Browser" href="/resources/programmingpatel_public_pgp.asc" type="text/plain">View</a>
+				-->
+				&middot;
+				<p>Fingerprint: B12D F147 190D B067 C168 8FFA FFE3 9595 17DB 2368</p>
+				<!--
+				&middot;
+				<a href="/resources/pp_public_pgp_QR.png">(QR Code)</a>
+				-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

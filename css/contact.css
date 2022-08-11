@@ -1,0 +1,43 @@
+#me {
+	margin-left: 10%;
+	padding-top: 3%;
+  	animation: fadeIn 0.5s ease-in;
+}
+
+#me h1 {
+	font-size: 10vmin;
+}
+
+#me a, #me a:visited {
+	color: whitesmoke;
+	transition: color 0.5s;
+}
+
+#me a:hover {
+	color: orange;
+	transition: color 0.5s;
+}
+
+.emailAddr {
+	font-family: "Roboto Mono", monospace;
+	font-weight: 700;
+	font-size: 3vmin;
+	text-decoration: none;
+}
+
+.extras {
+	color: whitesmoke;
+	margin-left: 3%;
+	margin-top: 1em;
+	font-weight: 300;
+	font-size: 2vmin;
+}
+
+.extras > * {
+	display: inline;
+}
+
+.extras a:hover {
+	text-decoration: underline;
+	text-decoration-color: inherit;
+}
