@@ -1,57 +1,61 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# site settings
 
-title: sheenpatel.com
-email: programmingpatel@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  The (probably still outdated) web home of Sheen. Read about some projects
-  I've worked on and learn what I do!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  PseudoynmPatel
+title: Sheen Patel
+description: Sheen Patel | Portfolio
+taglong: Civil Engineering Student at UofT
+tagshort: Civil BASc at UofT
+url: https://pseudonymPatel.github.io/portfolioWebsite
+baseurl: "https://pseudonymPatel.github.io/portfolioWebsite"
+permalink: pretty
+repo: https://github.com/PseudonymPatel/portfolioWebsite
 
-# Build settings
-theme: minima
+# author settings
+
+author:
+  name: Sheen Patel
+  email: sheennpatel@gmail.com
+photo: /assets/jpg/photo.jpg
+
+# social media links
+
+social:
+  facebook: username
+  github: PseudonymPatel
+  instagram: username
+  linkedin: sheen-patel
+  stackoverflow: 0000000/username
+  twitter: username
+
+# build settings
+
+exclude:
+  - LICENSE
+  - README.md
+
 plugins:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-collections:
-  posts:
-    output: true
-    permalink: /blog/:name
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+whitelist:
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: never
+
+feed:
+  path: atom.xml
+
+autopages:
+  enabled: false
+
+pagination:
+  enabled: true
+  per_page: 1
+  sort_reverse: true
+  permalink: /:num/
+  title: ":title &middot; Page :num"
