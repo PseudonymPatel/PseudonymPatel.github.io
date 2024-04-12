@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Municipal Planning for Town of Adamsville
-lead: Course Project for CIV340 - Municipal Engineering
+lead: In this course project, we designed the municipal system in a 17 hectare proposed subdivision. 
 ---
 
 As a team of four students, we designed the water mains, sanitary sewer, and storm sewer for a proposed subdivision in a fictional town of Adamsville. 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 4-Story Office Building 
-lead: For the Steel and Timber Course Project
+title: Four-Story Steel Office Building 
+lead: As part of Steel and Timber Design, we designed a steel-framed office building using SAP2000 and conforming to CSA S16-19.
 ---
 
 Teams of five students work together to design the framing members of a four-story office building over the course of a couple weeks, utilizing hand calculations, SAP2000, and the Handbook of Steel Construction.
