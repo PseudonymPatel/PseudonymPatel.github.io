@@ -21,7 +21,7 @@ a {
   &:focus,
   &:hover {
     border-bottom: calc(var(--type-size) / 10) dotted var(--color-link);
-    color: var(--color-link);
+    color: orange;
   }
 }
 

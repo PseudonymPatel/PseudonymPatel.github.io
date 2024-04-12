@@ -5,8 +5,10 @@
   <h2>{{ yearMonth.name }}</h2>
   <ul>
     {% for post in yearMonth.items %}
-    <li><a href="{{ post.url }}">{{ post.title }}.</a> <span class="lead">{{ post.lead }}</span></li>
+    <li>
+		<h3><a href="{{ post.url }}">{{ post.title }}.</a></h3>
+		<span class="lead">{{ post.lead }}</span>
+	</li>
     {% endfor %}
   </ul>
   {% endfor %}
-</div>
