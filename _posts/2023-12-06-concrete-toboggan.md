@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Co-Captain of Concrete Toboggan
-lead: Leading a large design team in competing annually with all-new vehicle.
+title: Co-Captain of UofT Concrete Toboggan Design Team
+lead: In this article, I explain my experiences leading a large design team which competes annually with an all-new vehicle.
 ---
 
-As one of two co-captains of the UofT Concrete Toboggan Design Team, I focused on managing scheduling and outreach.
+As one of two co-captains of the UofT Concrete Toboggan Design Team, I focused on managing scheduling and outreach. In addition, I hired and managed a team of 12 leads, as well as over 30 general members.
 {: .message }
 
 - toc
@@ -15,8 +15,9 @@ As one of two co-captains of the UofT Concrete Toboggan Design Team, I focused o
 The UofT Concrete Toboggan Design Team is an entirely student-led design team consisiting of undergraduate engineering students from the University of Toronto. Every year, we design, simulate, build, test, and finally race a five-person toboggan down a ski hill against other Canadian engineering schools.
 We are part of the GNCTR competition, the oldest running engineering competition in Canada. The team consists of over 40 members, with 14 executives, including myself. All our executive members are chosen through an interview process. Our team prides itself on being open and anyone is able to become a general member and start 
 working on the toboggan, which provides a unique challenge for leading the team. We also manage our own finances and logistics, with an annual budget of over $80,000. 
-<img src="/assets/posts/tbogoverview.png" />
-Above: Last year's toboggan racing down the hill in Kelowna, BC. 
+
+<img src="/assets/posts/tbogoverview.jpg" />
+Above: This year's (2024) toboggan racing down the hill in St. Johns, NL. 
 
 ## Planning and My Role
 As one of the two co-captains, I mainly focus on the scheduling, planning, and day-to-day on-the-ground leadership of the team. This means making sure that execs have resources they need to perform their role, as well as
