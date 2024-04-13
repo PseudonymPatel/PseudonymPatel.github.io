@@ -17,7 +17,7 @@ created for the purposes of this course, and mimicks actual subdivisions in the 
 including two high-rise apartment buildings. We started with designing the water mains and fire hydrants, then moved onto adding the sanitary sewer systems, and finishing with the stormwater sewer system. 
 For each, we needed to design, draw, and verify the system was compliant with a design standard given, similar to the one used by the City of Toronto.
 
-<img src="/assets/posts/municipal_layout.png" />
+<img src="/assets/posts/municipal_layout.jpg" />
 Above: Final General Plan for Adamsville.
 
 ## Analysis and Design
